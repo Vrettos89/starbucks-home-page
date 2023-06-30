@@ -1,3 +1,3 @@
 # starbucks-home-page
 
-Present the Starbucks Home Page
+Presents the Starbucks Home Page
