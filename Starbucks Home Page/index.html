@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" /> 
+    <title>StarBucks Landing Page</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+        <a href="#"><img src="./images/logo.png" class="logo"></a>
+        <div class="toggle"onclick="toggleMenu();"></div>
+        <ul class="navigation">
+            <li><a href="#">Home</a></li>
+            <li><a href="https://www.starbucks.com/menu" target="_blank">Menu</a></li>
+            <li><a href="https://www.starbucks.com/ways-to-order/" target="_blank">What's New</a></li>
+            <li><a href="https://www.starbucks.com/store-locator?map=39.083978,-95.100279,4z" target="_blank">Contact</a></li>
+        </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>It's not just Coffee<br >It's <span>StarBucks</span></h2>
+                <p>Every day, we go to work hoping to do two things: share great coffee with our friends and 
+                help make the world a little better.
+                It was true when the first Starbucks opened in 1971, and it’s just as true today.</p>
+                <br ><p>Our coffee masters have distilled their years of tasting knowledge down to three simple
+                questions to help you find a Starbucks coffee you’re sure to love.</p>
+                <br ><a href="https://github.com/GVrettos89" target="_blank">Learn More About Us</a>
+            </div>
+            <div class="imgBox">
+                <img src="./images/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="./images/thumb1.png" onclick="imgSlider('./images/img1.png'); changeCircleColor('#017143')"></li>
+            <li><img src="./images/thumb2.png" onclick="imgSlider('./images/img2.png'); changeCircleColor('#ecB8B3')"></li>
+            <li><img src="./images/thumb3.png" onclick="imgSlider('./images/img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="https://facebook.com/starbucks" target="_blank"><img src="./images/facebook.png"></a></li>
+            <li><a href="https://twitter.com/starbucks/" target="_blank"><img src="./images/twitter.png"></a></li>
+            <li><a href="https://instagram.com/starbucks" target="_blank"><img src="./images/instagram.png"></a></li>
+        </ul>
+    </section>
+<footer>
+    <div class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>Copyright © 2021 - All Rights Reserved. Created and Designed by <a href="https://github.com/GVrettos89/" target="_blank"
+                     style="padding-left: 0px; text-decoration: none;">GVrettos89</a></p>
+                </div>
+                <div class="col-md-6">
+                    <div class="copyright-menu">
+                        <ul>
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a href="https://www.starbucks.com/menu" target="_blank">Menu</a>
+                            </li>
+                            <li>
+                                <a href="https://www.starbucks.com/ways-to-order/" target="_blank">What's New</a>
+                            </li>
+                            <li>
+                                <a href="https://www.starbucks.com/store-locator?map=39.083978,-95.100279,4z" target="_blank">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+ <!--javascript -->
+    <script type="text/javascript">
+           function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything;
+           }
+           
+           function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+           }
+
+           function toggleMenu(){
+            var menuToggle = document.querySelector('.toggle');
+            var navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+           }
+    </script>
+</body>
+</html>
